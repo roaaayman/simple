@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { db, ref, push } from './firebaseConfig'; // Import Firebase functions
 import { Link } from 'react-router-dom'; // Import Link for routing
-
+import './AddGroup.css'; 
 const AddGroup = () => {
   const [groupName, setGroupName] = useState('');
   const [groupType, setGroupType] = useState('');
@@ -11,10 +11,9 @@ const AddGroup = () => {
     e.preventDefault();
 
     if (groupName && groupType) {
-      // Get reference to 'groups' node in Firebase Realtime Database
       const groupRef = ref(db, 'groups');
 
-      // Use push() to add a new group to the database
+      //to add a new group to the database
       push(groupRef, {
         name: groupName,
         type: groupType
@@ -33,6 +32,8 @@ const AddGroup = () => {
   };
 
   return (
+    <body>
+    <center>
     <div>
       <h2>Add a Social Media Group</h2>
       <form onSubmit={handleSubmit}>
@@ -42,12 +43,14 @@ const AddGroup = () => {
           value={groupName}
           onChange={(e) => setGroupName(e.target.value)}
         />
+        <br/>
         <input
           type="text"
           placeholder="Group Type"
           value={groupType}
           onChange={(e) => setGroupType(e.target.value)}
         />
+        <br/>
         <button type="submit">Submit</button>
       </form>
 
@@ -56,6 +59,8 @@ const AddGroup = () => {
         <button>Show All Groups</button>
       </Link>
     </div>
+    </center>
+    </body>
   );
 };
 

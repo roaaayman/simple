@@ -1,6 +1,7 @@
 // DisplayGroups.js
 import React, { useState, useEffect } from 'react';
 import { db, ref, get } from './firebaseConfig'; // Import Firebase functions
+import './DisplayGroups.css'; 
 
 const DisplayGroups = () => {
   const [groups, setGroups] = useState([]); // State to store groups
@@ -34,6 +35,7 @@ const DisplayGroups = () => {
   return (
     <div>
       <h2>All Social Media Groups</h2>
+      <center>
       <ul>
         {groups.length === 0 ? (
           <p>No groups available</p>
@@ -45,6 +47,7 @@ const DisplayGroups = () => {
           ))
         )}
       </ul>
+      </center>
     </div>
   );
 };

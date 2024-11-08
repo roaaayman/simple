@@ -1,0 +1,33 @@
+body{
+    background-color: rgb(255, 234, 238);
+}
+button{
+    background-color: rgb(255, 0, 140);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 15px 30px; /* Adjust the padding to make buttons larger */
+    margin-top: 10px;
+    border-radius: 5px;
+    width: 15%;
+}
+/* AddGroup.css */
+
+input[type="text"] {
+    width: 15%; /* Full width */
+    padding: 10px; /* Padding inside the input */
+    margin-bottom: 10px; /* Space below each input */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+  }
+
+h2{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-weight: bolder;
+}   
+  
+ 
